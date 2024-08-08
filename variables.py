@@ -9,7 +9,7 @@ def mostrar():
     print(Valor)
     Valor = int(input ("Ingrese un numero: "))
     print(Valor)
-
+    
 def listo():
     global Valor
     print(Valor)
