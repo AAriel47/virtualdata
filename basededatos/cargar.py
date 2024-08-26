@@ -36,4 +36,4 @@ def ca():
             basedatos.cardat(codigo,nombre,apellido,curso,nota)
     else:
         print("archivo inexistente".upper())
-ca()
+#ca()
