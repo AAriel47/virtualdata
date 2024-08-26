@@ -32,6 +32,7 @@ print(cuentaLetras)
 cun = [0] * int(len(cuentaLetras))
 #cun2 = list()
 cuentaLetras2 = cuentaLetras.items()
+
 e = 0
 for i in cuentaLetras2:
     cun[e]=i

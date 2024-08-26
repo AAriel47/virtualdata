@@ -6,6 +6,7 @@ apel = reversed(apellido)
 apelli=""
 for a in apel:
     apelli += a
+print("apellido1:", apel)
 print(f"Apellido: {apelli}")
 print(f"apel: {type(apel)}")
 print("ale".index("a"))
