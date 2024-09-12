@@ -16,8 +16,7 @@ def borracod():
     conn.commit()
     cursor.execute("""select * from alumnos"""
             )
-    
-    
+        
     im = cursor.fetchall()
     conn.close()
     i=0

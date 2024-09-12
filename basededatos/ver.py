@@ -12,5 +12,5 @@ def consul():
     print(f"{"-".rjust(40,"-")} {"< listado de alumnos >".upper()} {"-".ljust(40,"-")}")
     for i in alumnos:
         print(i)
-    # return 
+    #return "si"
 #consul()

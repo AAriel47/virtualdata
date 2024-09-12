@@ -1,7 +1,7 @@
 import mysql.connector
 def cardat(codigo1, nombre1, apellido1, materia1, nota1):
     
-    global mysql
+    g#lobal mysql
     #print(codigo1, nombre1, apellido1, materia1, nota1,"base")
     conn = mysql.connector.connect(
         host = "localhost",

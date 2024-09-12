@@ -19,18 +19,21 @@ def ca():
             while (i<len(datalum)):
                 i += 1
             #print(i)
+            #input()
             if i==6:
                 codigo = datalum[0]
                 nombre = datalum[1]+" "+datalum[2]
                 apellido = datalum[3]
                 curso = datalum[4]
                 nota = datalum[5]
+                i = 0
             else:
                 codigo = datalum[0]
                 nombre = datalum[1]+" "+datalum[2]+" "+datalum[3]
                 apellido = datalum[4]
                 curso = datalum[5]
                 nota = datalum[6]
+                i = 0
             #input("pul")
             #print((codigo,nombre,apellido,curso,nota))
             basedatos.cardat(codigo,nombre,apellido,curso,nota)

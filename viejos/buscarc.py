@@ -1,5 +1,5 @@
 import os
-os.system("cls" if os.name=="nt" else "clear")
+
 b = "ariel"
 """if (b.find("ariel")!=-1):
     print("existe")
