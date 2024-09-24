@@ -20,6 +20,7 @@ a = (1,2)
 b = (3,4)
 a, b = b, a
 print (a, b)
+con={1,2,3}
 
 #numeros=[1,2,3,4,5,6,7,8,9,10]
 #paridad = list(filter(lambda n: n%2==0,numeros))
