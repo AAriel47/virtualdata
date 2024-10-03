@@ -5,16 +5,18 @@ import re
 import consultas
 import borrar
 import modificar
+#import menubd
 
 def mostrar():
     print("\t1. Alta: ".upper())
     print("\t2. Baja: ".upper())
     print("\t3. Modificaciones: ".upper())
     print("\t4. Consulta: ".upper())
-    print("\t5. Salir: ".upper())
+    print("\t5. base de datos: ".upper())
+    print("\t6. Salir: ".upper())
 
-def opciones(opcion):
-    match (opcion):
+def opciones(opcion1):
+    match (opcion1):
         case "1":
             #subprocess.run(["python","alta.py"])
             alta.alt()
@@ -28,6 +30,9 @@ def opciones(opcion):
             #subprocess.run(["python","consultas.py"])
             consultas.con()
         case"5":
+            subprocess.run(["python","menubd.py"])
+            #menubd.main()
+        case "6":
             input("Final de ejecución del sistema".upper().center(100))
         case _:
             input("opción no válida ".upper().center(100))
@@ -43,11 +48,11 @@ def main():
             pass
         else:
             exec('os.chdir("repaso")')
-        opcion = input("\tSeleccion una opción: ".upper())
-        if opcion != "5" :
-            opciones(opcion)
-        elif opcion == "5":
-            opciones(opcion)
+        opcion1 = input("\tSeleccion una opción: ".upper())
+        if opcion1 != "6" :
+            opciones(opcion1)
+        elif opcion1 == "6":
+            opciones(opcion1)
             os.system("cls" if os.name=="nt" else "clear")
             break
 

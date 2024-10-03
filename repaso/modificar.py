@@ -25,7 +25,7 @@ def modi2():
             emple.clear()
             continue
         if (modif.modi(codigo)=="no existe"):
-            input(f"{"código inexsisteme, pulse enter...".upper().center(100)}")
+            input(f"{"código inexistente, pulse enter...".upper().center(100)}")
             emple.clear()
             continue
 

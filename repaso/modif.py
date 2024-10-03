@@ -21,23 +21,24 @@ def modi(codigo):
                 input()
                 return
     else:
-        input(f"{"empleados.txt, no existe, pulse enter...".center(100).upper()}")
+        input(f"{"empleado.dat, no existe, pulse enter...".center(100).upper()}")
         return
 
     for inf in informe:
         info.append(inf.split(","))
     i=0
     while i<len(info):
+        limpiar.limp()
         if (int(info[i][0])==int(codigo)):
             print(f"{"\tcódigo empleado: ".upper()} {info[i][0]}")
             print(f"{"\tnombre empleado: ".upper()} {info[i][1]}")
-            print(f"{"\tcódigo de área: ".upper()} {info[i][2]}")            
+            print(f"{"\tcódigo de área:  ".upper()} {info[i][2]}")            
 
             mod = input("\tDESEA MODIFICAR S/N: ")
             if (mod.lower()=="s"):
                 print(f"{"\tcódigo empleado: ".upper()} {info[i][0]}")
 
-                info.insert([i][1],input(f"{"\tnombre empleado: ".upper()}"))
+                info[i][1]=input(f"{"\tnombre empleado: ".upper()}")
                 
                 nombre = info[i][1]
                 expreg1 = re.compile(patternnom)
@@ -46,23 +47,21 @@ def modi(codigo):
 
                 if not (val1):
                     input(f"Valor no valido {info[i][1]}, ejempo 'Carol Corina Correa', pulse enter...")
-                    emple.clear()
+                    info.clear()
                     continue
 
-                info.insert([i][2],(input(f"{"\tCódigo de Area:  ".upper()}")))
+                info[i][2]=input(f"{"\tCódigo de Area:  ".upper()}")
 
                 area = info[i][2]
                 expreg2 = re.compile(patternarea)
                 val2 = expreg2.match(area)
                 if not(val2):
-                    input(f"Valor no valido {emple[2]}, pulse enter...".upper().center(100))
-                    emple.clear()
+                    input(f"Valor no valido {info[i][2]}, pulse enter...".upper().center(100))
+                    info.clear()
                     continue
-                print(info)
-                input()
-                return
+                info[i][2]=info[i][2]+"\n"
                 carga=[",".join(line) for line in info]
-
+                print(carga)
                 if(os.path.exists(empleados)):
                     #input(type(info))
                     archi1 = open(empleados,"w",encoding="utf-8")
@@ -73,11 +72,11 @@ def modi(codigo):
                         archi1.writelines(carga)
                         archi1.close()
 
-                print("REGISTRO BORRADO CORRECTAMENTE".center(100))
+                print("REGISTRO MODIFICADO CORRECTAMENTE".center(100))
                 print("PULSE ENTER PARA CONTINUAR...".center(100))
                 input()
             else:
-                print("EL REGISTRO NO FUE BORRADO".center(100))
+                print("EL REGISTRO NO FUE MODIFICADO".center(100))
                 print("PULSE ENTER PARA CONTINUAR...".center(100))
                 input()
             return "existe"
