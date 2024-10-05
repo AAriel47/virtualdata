@@ -19,8 +19,9 @@ def ejecutarbd(opcion):
             subprocess.run(["python","altabd.py"])
             #altabd()
             #pass
-        case "2":
-            pass
+        case 2:
+            subprocess.run(["python","borrarbd.py"])
+            #pass
         case "3":
             pass
         case 4:
