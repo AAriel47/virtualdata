@@ -5,7 +5,7 @@ limpiar.limp
 import sys
 sys.path.append('D:\\Aprender\\CapacitacionesNuevas\\VisualStudioCode\\PracticaPython\\PracticaPy1\\virtualdata\\Lib\\site-packages')
 import mysql.connector
-
+import time
 #import consultbd
 
 linea = list()
@@ -43,7 +43,7 @@ while True:
     #cursor.close()
 
     if ver == []:
-        input("entro primero")
+        input("Base de Datos vacía, primera carga".upper())
         mcod = 0
         mnom = "" 
         marea = 0
@@ -61,7 +61,7 @@ while True:
         conn.commit()
         cursor1.execute("""select * from nomina""")
         ver1 = cursor1.fetchall()            
-        print(ver1)
+        #print(ver1)
     else:
         mcod=0
         i = 0
@@ -77,5 +77,15 @@ while True:
                 )
             i = i + 1
         conn.commit()
+        cursor1.execute(
+            """select * from nomina"""
+        )
+        ver1 = cursor1.fetchall()
+    ver1.sort()
+    for mos in ver1:
+        print([mos])
+        time.sleep(1)
+    time.sleep(3)
     conn.close()
+    print("")
     break

@@ -22,7 +22,8 @@ def ejecutarbd(opcion):
         case 2:
             subprocess.run(["python","borrarbd.py"])
             #pass
-        case "3":
+        case 3:
+            subprocess.run(["python","modifdb.py"])
             pass
         case 4:
             subprocess.run(["python","consuldb.py"])
